@@ -13,3 +13,9 @@ docker run -d -p 8080:8080 spring-boot-docker tail -f /dev/null
 
 # Loging interactively to docker
 docker exec -it <docker_name> bash
+
+
+# start mysql docker app
+docker run --name jt-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql
+exec -it jt-mysql bash
+mysql --user=root -p
